@@ -5,7 +5,7 @@ LABEL org.opencontainers.image.source=https://github.com/bokub/ha-linky
 LABEL org.opencontainers.image.description="HA Linky Add-on"
 LABEL org.opencontainers.image.licenses=MIT
 
-RUN apk add --no-cache nodejs npm
+RUN apk add --no-cache nodejs npm typescript
 
 WORKDIR /linky
 
@@ -22,4 +22,3 @@ RUN chmod a+x ./run.sh
 RUN npm run build
 
 CMD [ "./run.sh" ]
-
